@@ -1,5 +1,7 @@
+const goal = 25;
 let entries = [];
 const entriesWrap = document.querySelector("#entries") 
+document.querySelector("target").innerText = goal;
 
 function addNewEntry(newEntry) {
     entriesWrap.removeChild(entriesWrap.firstElementChild);
