@@ -52,3 +52,22 @@ text-align: center;
     margin: 1rem;
     padding: 2rem;
 }
+
+.progress {
+    text-align: center;
+    padding-bottom: 1rem
+}
+.progress h3 {
+    font-weight: lighter;
+    font-size: 1.6rem;
+}
+.progWrapper {
+display: flex;
+justify-content: center;
+}
+#progresscircle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(hwb(120 1% 57%) 50%, rgb(43, 39, 39) 50%);
+}
