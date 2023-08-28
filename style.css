@@ -69,5 +69,17 @@ justify-content: center;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: conic-gradient(hwb(120 1% 57%) 50%, rgb(43, 39, 39) 50%);
+    /* background: conic-gradient(hwb(120 1% 57%) 50%, rgb(43, 39, 39) 50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#progresscenter {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: rgba(43, 39, 39);
+}
+@media screen and (min-width: 800px) {
+   width: 60%; 
 }

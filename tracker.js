@@ -1,7 +1,7 @@
 const goal = 25;
 let entries = [];
 const entriesWrap = document.querySelector("#entries") 
-document.querySelector("target").innerText = goal;
+document.querySelector("#target").innerText = goal;
 
 function addNewEntry(newEntry) {
     entriesWrap.removeChild(entriesWrap.firstElementChild);
@@ -28,6 +28,14 @@ function weekHigh() {
     const high = Math.max(...entries)
     document.getElementById("high").innerText = high;
 }
+function calcGoal() {
+    const totalValue = entries.reduce(reduce).toFixed(1);
+    const completedPercent = totalValue / (goal / 100);
+    const progresscircle = document.querySelector('#progresscircle');
+    if(completedPercent > 100) completedPercent === 100;
+    progresscircle.style.background = `conic-gradient(hwb(120 1% 57%) ${completedPercent}%, rgb(43, 39, 39) ${completedPercent}% 100%)`;
+    
+}
 function handleSubmit(event) {
     event.preventDefault()
 
@@ -39,6 +47,7 @@ addNewEntry(entry);
 calcTotal(entries);
 calcAverage();
 weekHigh();
+calcGoal();
 }
 
 const form = document.querySelector("form").addEventListener("submit", handleSubmit);
